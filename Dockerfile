@@ -25,7 +25,7 @@ RUN apt-get update && \
     rm -rf /src/3.2.0-contrib.zip && \
     mkdir -p $OPENCV_DIR/opencv-3.2.0/build && \
     cd $OPENCV_DIR/opencv-3.2.0/build && \
-    cmake -D CMAKE_BUILD_TYPE=RELEASE -D BUILD_PYTHON_SUPPORT=ON -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=OFF -D PYTHON3_EXECUTABLE=/usr/bin/python3 -D PYTHON_INCLUDE_DIR=/usr/include/python3.5 -D PYTHON_INCLUDE_DIR2=/usr/include/x86_64-linux-gnu/python3.5m -D PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.5m.so -D PYTHON3_NUMPY_INCLUDE_DIRS=/usr/local/lib/python3.5/dist-packages/numpy/core/include/ -D OPENCV_EXTRA_MODULES_PATH=$OPENCV_DIR/opencv_contrib-3.2.0/modules -D BUILD_EXAMPLES=OFF -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_IPP=OFF -D WITH_V4L=ON .. && \
+    cmake -D CMAKE_BUILD_TYPE=RELEASE -D BUILD_PYTHON_SUPPORT=ON -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_C_EXAMPLES=OFF -D INSTALL_PYTHON_EXAMPLES=OFF -D PYTHON3_EXECUTABLE=/usr/bin/python3 -D PYTHON_INCLUDE_DIR=/usr/include/python3.5 -D PYTHON_INCLUDE_DIR2=/usr/include/x86_64-linux-gnu/python3.5m -D PYTHON_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.5m.so -D PYTHON3_NUMPY_INCLUDE_DIRS=/usr/local/lib/python3.5/dist-packages/numpy/core/include/ -D OPENCV_EXTRA_MODULES_PATH=$OPENCV_DIR/opencv_contrib-3.2.0/modules -D BUILD_EXAMPLES=OFF -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_IPP=OFF -D WITH_V4L=ON -D WITH_CUDA=OFF .. && \
     make -j8 && \
     make install && \
     ldconfig && \
