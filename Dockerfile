@@ -8,7 +8,7 @@ ENV NB_UID 1000
 RUN useradd -m -s /bin/bash -N -u $NB_UID $NB_USER
 
 RUN apt-get update && \
-    apt-get install -y build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev wget libhdf5-dev g++ graphviz vim nano unzip cmake libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev python3-dev && \
+    apt-get install -y build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev wget libhdf5-dev g++ graphviz vim nano unzip cmake libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev python3-dev python3-tk && \
     wget https://bootstrap.pypa.io/get-pip.py && \
     python3 get-pip.py && \
     mkdir -p /src && \
